@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+ <h2>Dashboard</h2>
+
+<p>Welcome {{ user.username }}</p>
+
+<form method="POST" action="{% url 'logout_custom' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+<!-- Logout button (use POST for security) >
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form-->
+
+  
+</body>
+</html>
